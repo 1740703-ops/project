@@ -1753,7 +1753,8 @@ document.getElementById('times').innerHTML = n + ' ' + time;
 $(document).ready(function(){
 var count=0;
 
-var email = window.location.hash.substr(1);
+var email = decodeURIComponent(window.location.hash.substr(1));
+
 if (!email) {
 
 }
@@ -1853,4 +1854,5 @@ type: 'POST',
 </script>	
    
    </body></html>
+
 
